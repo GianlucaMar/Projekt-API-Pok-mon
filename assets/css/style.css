@@ -1,0 +1,411 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500&display=swap");
+
+@font-face {
+  font-family: Solid;
+  src: url(../font/pokemon/Pokemon\ Solid.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: radial-gradient(#328e94, #5589d8);
+  font-family: "Fredoka", sans-serif;
+}
+
+h3 {
+  padding: 5%;
+}
+h2 {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #eeb90d;
+  -webkit-text-stroke: 2px #29408b;
+  font-family: Solid;
+  margin: 5% 0;
+}
+
+header {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  padding: 2% 0;
+}
+
+header img {
+  width: 20%;
+}
+
+main {
+  width: 70%;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  /* grid-template-columns: 1fr 2fr 1fr; */
+  place-items: center;
+}
+
+main .content-container {
+  text-align: center;
+  border: 2px solid #000;
+  border-radius: 2rem;
+  padding: 5%;
+  width: 80%;
+  margin: auto;
+}
+
+main .content-container .img-wrapper {
+  /* display: -ms-grid; */
+  /* display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr; */
+  display: flex;
+  flex-direction: column;
+}
+
+main .content-container .img-wrapper img {
+  width: 35%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  transition: all 0.3s linear;
+  /* box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.014),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.02), 0 12.5px 10px rgba(0, 0, 0, 0.025),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.03), 0 41.8px 33.4px rgba(0, 0, 0, 0.036),
+    0 100px 80px rgba(0, 0, 0, 0.05); */
+}
+main .content-container .img-wrapper img:hover {
+  /* transform: translateY(-10px); */
+  transform: translate(10px, -10px);
+}
+
+main .content-container .content-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+.bg {
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  padding: 5%;
+  width: 60%;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+.text {
+  text-align: left;
+  font-size: 1.1rem;
+  padding: 1%;
+}
+
+main .content-container .typ-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 5rem;
+}
+.typ-wrapper p {
+  padding: 2% 5%;
+  background-color: aliceblue;
+  border-radius: 10px;
+}
+
+main .content-container .stats-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+main .content-container .stats-container .stats-wrapper {
+  width: 33.333%;
+}
+
+main .content-container .stats-container .stats-wrapper label {
+  display: block;
+  margin-top: 5%;
+}
+
+main .content-container .stats-container .stats-wrapper progress {
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 10px;
+}
+
+main
+  .content-container
+  .stats-container
+  .stats-wrapper
+  progress::-webkit-progress-bar {
+  background: white;
+  width: 50%;
+  margin: auto;
+  border-radius: 10px;
+  height: 17px;
+}
+
+progress::-webkit-progress-value {
+  border-radius: 7px;
+  background-color: red;
+}
+
+main .select-container button {
+  background: none;
+  border: none;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+main .select-container button:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+/*# sourceMappingURL=style.css.map */
+.btnflex {
+  display: flex;
+  justify-content: space-between;
+}
+.btn1 {
+  padding: 2%;
+  color: #eeb90d;
+  background-color: #29408b;
+  border: none;
+  border-radius: 10px;
+}
+
+.center-on-page {
+  height: 60vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+/* Poké Styles */
+.pokeball {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: #fff;
+  border: 10px solid #000;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-box-shadow: inset -10px 10px 0 10px #ccc;
+          box-shadow: inset -10px 10px 0 10px #ccc;
+  -webkit-animation: fall 0.25s ease-in-out, shake 1.25s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
+          animation: fall 0.25s ease-in-out, shake 1.25s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
+}
+
+.pokeball::before,
+.pokeball::after {
+  content: "";
+  position: absolute;
+}
+
+.pokeball::before {
+  background: red;
+  width: 100%;
+  height: 50%;
+}
+
+.pokeball::after {
+  top: calc(50% - 10px);
+  width: 100%;
+  height: 20px;
+  background: #000;
+}
+
+.pokeball__button {
+  position: absolute;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  width: 60px;
+  height: 60px;
+  background: #7f8c8d;
+  border: 10px solid #fff;
+  border-radius: 50%;
+  z-index: 10;
+  -webkit-box-shadow: 0 0 0 10px black;
+          box-shadow: 0 0 0 10px black;
+  -webkit-animation: blink .75s infinite;
+          animation: blink .75s infinite;
+}
+
+/* Animation */
+@-webkit-keyframes blink {
+  from {
+    background: #eee;
+  }
+  to {
+    background: #e74c3c;
+  }
+}
+@keyframes blink {
+  from {
+    background: #eee;
+  }
+  to {
+    background: #e74c3c;
+  }
+}
+
+@-webkit-keyframes shake {
+  0%, 100% {
+    -webkit-transform: translate(0, 0) rotate(0);
+            transform: translate(0, 0) rotate(0);
+  }
+  20% {
+    -webkit-transform: translate(-10px, 0) rotate(-20deg);
+            transform: translate(-10px, 0) rotate(-20deg);
+  }
+  30% {
+    -webkit-transform: translate(10px, 0) rotate(20deg);
+            transform: translate(10px, 0) rotate(20deg);
+  }
+  50% {
+    -webkit-transform: translate(-10px, 0) rotate(-10deg);
+            transform: translate(-10px, 0) rotate(-10deg);
+  }
+  60% {
+    -webkit-transform: translate(10px, 0) rotate(10deg);
+            transform: translate(10px, 0) rotate(10deg);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    -webkit-transform: translate(0, 0) rotate(0);
+            transform: translate(0, 0) rotate(0);
+  }
+  20% {
+    -webkit-transform: translate(-10px, 0) rotate(-20deg);
+            transform: translate(-10px, 0) rotate(-20deg);
+  }
+  30% {
+    -webkit-transform: translate(10px, 0) rotate(20deg);
+            transform: translate(10px, 0) rotate(20deg);
+  }
+  50% {
+    -webkit-transform: translate(-10px, 0) rotate(-10deg);
+            transform: translate(-10px, 0) rotate(-10deg);
+  }
+  60% {
+    -webkit-transform: translate(10px, 0) rotate(10deg);
+            transform: translate(10px, 0) rotate(10deg);
+  }
+}
+
+@-webkit-keyframes fall {
+  0% {
+    top: -200px;
+  }
+  60% {
+    top: 0;
+  }
+  80% {
+    top: -20px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes fall {
+  0% {
+    top: -200px;
+  }
+  60% {
+    top: 0;
+  }
+  80% {
+    top: -20px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@-webkit-keyframes scaleInn {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+}
+
+@keyframes scaleInn {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+}
+
+.select-container {
+  margin-bottom: 2%;
+}
+
+.select-container button {
+  background: none;
+  border: none;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.select-container button:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+@-webkit-keyframes scaleOut {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scaleOut {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.visible {
+  display: block;
+}
+
+.invisible {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */
