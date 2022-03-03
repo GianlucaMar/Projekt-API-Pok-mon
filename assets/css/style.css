@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: Solid;
-  src: url(../font/pokemon/Pokemon\ Solid.ttf);
+  src: url(../font/Pokemon\ Solid.ttf);
 }
 
 * {
@@ -204,9 +204,11 @@ main .select-container button:hover {
   border-radius: 50%;
   overflow: hidden;
   -webkit-box-shadow: inset -10px 10px 0 10px #ccc;
-          box-shadow: inset -10px 10px 0 10px #ccc;
-  -webkit-animation: fall 0.25s ease-in-out, shake 1.25s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
-          animation: fall 0.25s ease-in-out, shake 1.25s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
+  box-shadow: inset -10px 10px 0 10px #ccc;
+  -webkit-animation: fall 0.25s ease-in-out,
+    shake 1.25s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
+  animation: fall 0.25s ease-in-out,
+    shake 1.25s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
 }
 
 .pokeball::before,
@@ -239,9 +241,9 @@ main .select-container button:hover {
   border-radius: 50%;
   z-index: 10;
   -webkit-box-shadow: 0 0 0 10px black;
-          box-shadow: 0 0 0 10px black;
-  -webkit-animation: blink .75s infinite;
-          animation: blink .75s infinite;
+  box-shadow: 0 0 0 10px black;
+  -webkit-animation: blink 0.75s infinite;
+  animation: blink 0.75s infinite;
 }
 
 /* Animation */
@@ -263,48 +265,50 @@ main .select-container button:hover {
 }
 
 @-webkit-keyframes shake {
-  0%, 100% {
+  0%,
+  100% {
     -webkit-transform: translate(0, 0) rotate(0);
-            transform: translate(0, 0) rotate(0);
+    transform: translate(0, 0) rotate(0);
   }
   20% {
     -webkit-transform: translate(-10px, 0) rotate(-20deg);
-            transform: translate(-10px, 0) rotate(-20deg);
+    transform: translate(-10px, 0) rotate(-20deg);
   }
   30% {
     -webkit-transform: translate(10px, 0) rotate(20deg);
-            transform: translate(10px, 0) rotate(20deg);
+    transform: translate(10px, 0) rotate(20deg);
   }
   50% {
     -webkit-transform: translate(-10px, 0) rotate(-10deg);
-            transform: translate(-10px, 0) rotate(-10deg);
+    transform: translate(-10px, 0) rotate(-10deg);
   }
   60% {
     -webkit-transform: translate(10px, 0) rotate(10deg);
-            transform: translate(10px, 0) rotate(10deg);
+    transform: translate(10px, 0) rotate(10deg);
   }
 }
 
 @keyframes shake {
-  0%, 100% {
+  0%,
+  100% {
     -webkit-transform: translate(0, 0) rotate(0);
-            transform: translate(0, 0) rotate(0);
+    transform: translate(0, 0) rotate(0);
   }
   20% {
     -webkit-transform: translate(-10px, 0) rotate(-20deg);
-            transform: translate(-10px, 0) rotate(-20deg);
+    transform: translate(-10px, 0) rotate(-20deg);
   }
   30% {
     -webkit-transform: translate(10px, 0) rotate(20deg);
-            transform: translate(10px, 0) rotate(20deg);
+    transform: translate(10px, 0) rotate(20deg);
   }
   50% {
     -webkit-transform: translate(-10px, 0) rotate(-10deg);
-            transform: translate(-10px, 0) rotate(-10deg);
+    transform: translate(-10px, 0) rotate(-10deg);
   }
   60% {
     -webkit-transform: translate(10px, 0) rotate(10deg);
-            transform: translate(10px, 0) rotate(10deg);
+    transform: translate(10px, 0) rotate(10deg);
   }
 }
 
@@ -341,22 +345,22 @@ main .select-container button:hover {
 @-webkit-keyframes scaleInn {
   0% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
   100% {
     -webkit-transform: scale(2);
-            transform: scale(2);
+    transform: scale(2);
   }
 }
 
 @keyframes scaleInn {
   0% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
   100% {
     -webkit-transform: scale(2);
-            transform: scale(2);
+    transform: scale(2);
   }
 }
 
@@ -376,28 +380,28 @@ main .select-container button:hover {
 .select-container button:hover {
   cursor: pointer;
   -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  transform: scale(1.5);
 }
 
 @-webkit-keyframes scaleOut {
   0% {
     -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    transform: scale(0.5);
   }
   100% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
 }
 
 @keyframes scaleOut {
   0% {
     -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    transform: scale(0.5);
   }
   100% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
 }
 
